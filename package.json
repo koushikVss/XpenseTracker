@@ -1,0 +1,31 @@
+{
+  "name": "xpense-tracker",
+  "version": "1.0.0",
+  "description": "WebApp for payments tracking and settlement",
+  "keywords": [
+    "expense",
+    "tracker"
+  ],
+  "homepage": "https://github.com/koushikVss/XpenseTracker#readme",
+  "bugs": {
+    "url": "https://github.com/koushikVss/XpenseTracker/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koushikVss/XpenseTracker.git"
+  },
+  "license": "ISC",
+  "author": "KoushikVss",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "run test",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cross-env NODE_ENV=development npm --prefix server run dev",
+    "dev:frontend": "cross-env NODE_ENV=development npm --prefix client run dev"
+  },
+  "dependencies": {
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0"
+  }
+}
