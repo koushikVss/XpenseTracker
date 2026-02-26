@@ -5,6 +5,7 @@ description: |
   engaging GitHub issues with productivity insights, community highlights,
   and project recommendations.
 
+
 on:
   schedule: daily
   workflow_dispatch:
@@ -15,6 +16,9 @@ permissions:
   pull-requests: read
 
 network: defaults
+
+# engine: gemini
+# model: gemini-1.5-pro
 
 tools:
   github:
@@ -28,7 +32,8 @@ safe-outputs:
     title-prefix: "[repo-status] "
     labels: [report, daily-status]
 source: githubnext/agentics/workflows/daily-repo-status.md@2f03fdaafb8c1ae62dfde7e0be762a822a201aeb
-engine: copilot
+engine: gemini
+# model: gemini-1.5-pro
 ---
 
 # Daily Repo Status
